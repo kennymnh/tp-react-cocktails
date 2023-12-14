@@ -48,7 +48,7 @@ const Header = () => {
                     <div className="flex-grow-1">
                         <Link className="navbar-brand d-flex align-items-center" to="/">
                             <img src="https://www.zupimages.net/up/23/50/wjid.png" alt="Logo" width="30" height="30" className="d-inline-block align-text-top me-3"/>
-                            <span className="h3 m-0">Drinks</span>
+                            <span className="h3 m-0">Drinks!</span>
                         </Link>
                     </div>
 
