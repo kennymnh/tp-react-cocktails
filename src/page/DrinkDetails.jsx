@@ -2,6 +2,7 @@ import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Header from "../partial/Header";
 import Section from "../partial/Section";
+import Footer from "../partial/Footer";
 
 const DrinkDetails = () => {
     const {id} = useParams();
@@ -104,6 +105,7 @@ const DrinkDetails = () => {
                 </>}
             </div>
         </Section>
+        <Footer/>
     </>);
 };
 

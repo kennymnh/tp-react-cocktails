@@ -2,6 +2,7 @@ import Header from "../partial/Header";
 import RandomCategory from "../partial/RandomCategory";
 import LastDrinks from "../partial/LastDrinks";
 import {useEffect, useState} from "react";
+import Footer from "../partial/Footer";
 
 const Home = () => {
     const [drinks, setDrinks] = useState(null);
@@ -40,6 +41,7 @@ const Home = () => {
                 <RandomCategory categories={categories} className="mt-3"/>
             </div> }
         </div>
+        <Footer/>
     </>);
 };
 

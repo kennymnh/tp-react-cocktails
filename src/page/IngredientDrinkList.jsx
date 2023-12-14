@@ -4,6 +4,7 @@ import DrinkCard from "../partial/DrinkCard";
 import Section from "../partial/Section";
 import SectionDetails from "../partial/SectionDetails";
 import {useParams} from "react-router-dom";
+import Footer from "../partial/Footer";
 
 const IngredientDrinkList = () => {
     const {ingredientName} = useParams();
@@ -57,6 +58,7 @@ const IngredientDrinkList = () => {
                 </>}
             </div>
         </Section>
+        <Footer/>
     </>);
 };
 

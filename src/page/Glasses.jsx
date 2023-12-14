@@ -1,6 +1,7 @@
 import Header from "../partial/Header";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import Footer from "../partial/Footer";
 
 const Glasses = () => {
     const [glasses, setGlasses] = useState(null);
@@ -66,6 +67,7 @@ const Glasses = () => {
 
             </div>
         </div>
+        <Footer/>
     </>);
 };
 

@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import DrinkCard from "../partial/DrinkCard";
 import Section from "../partial/Section";
 import SectionDetails from "../partial/SectionDetails";
+import Footer from "../partial/Footer";
 
 const Drinks = () => {
     const [drinks, setDrinks] = useState(null);
@@ -48,6 +49,7 @@ const Drinks = () => {
                     </>}</>}
             </div>
         </Section>
+        <Footer/>
     </>);
 };
 

@@ -1,6 +1,7 @@
 import Header from "../partial/Header";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import Footer from "../partial/Footer";
 
 const Categories = () => {
     const [drinks, setDrinks] = useState(null);
@@ -66,6 +67,7 @@ const Categories = () => {
 
             </div>
         </div>
+        <Footer/>
     </>);
 };
 
