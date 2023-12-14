@@ -43,7 +43,7 @@ const Header = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-white shadow py-3">
+            <nav className="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
                 <div className="container">
                     <div className="flex-grow-1">
                         <Link className="navbar-brand d-flex align-items-center" to="/">
