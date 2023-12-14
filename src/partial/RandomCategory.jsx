@@ -5,7 +5,7 @@ const RandomCategory = ({categories, className}) => {
     const category = categories ? categories[Math.floor(Math.random() * categories.length)] : null;
 
     return (<div className={className}>
-        <h1>Random category</h1>
+        <h1><Link to="/categories" className="text-black text-decoration-none">Random category</Link></h1>
         <hr/>
 
         <div>
