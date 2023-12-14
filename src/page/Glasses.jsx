@@ -2,6 +2,7 @@ import Header from "../partial/Header";
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import Footer from "../partial/Footer";
+import Section from "../partial/Section";
 
 const Glasses = () => {
     const [glasses, setGlasses] = useState(null);
@@ -22,51 +23,48 @@ const Glasses = () => {
 
     return (<>
         <Header/>
-        <div className="container">
-            <div className="my-5 p-4 shadow-lg rounded-4">
-                <div className="mb-5">
-                    <h1>Glasses</h1>
-                    <hr/>
-                    <p>Wondering which glass fits your needs? Here are some choices!</p>
-                </div>
+        <Section>
+            <div className="mb-5">
+                <h1>Glasses</h1>
+                <hr/>
+                <p>Wondering which glass fits your needs? Here are some choices!</p>
+            </div>
 
 
-                <div className="row">
-                    {error ? <div className="alert alert-danger" role="alert">
-                        {error}
-                    </div> : <>
-                        {glasses ? <>
-                            {glasses.map((glass) => {
-                                return <>
-                                    <div className="col-12 col-sm-6 col-lg-3 mb-4">
-                                        <div className="card overflow-hidden shadow-sm" aria-hidden="true">
-                                            <div className="card-body">
-                                                <h4 className="card-title placeholder-glow m-0">
-                                                    <Link to={"/glass/" + encodeURIComponent(glass.strGlass)} className="text-black text-decoration-none stretched-link">{glass.strGlass}</Link>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </>
-                            })}
-                        </> : <>
-                            {[...Array(12)].map(() => <>
+            <div className="row">
+                {error ? <div className="alert alert-danger" role="alert">
+                    {error}
+                </div> : <>
+                    {glasses ? <>
+                        {glasses.map((glass) => {
+                            return <>
                                 <div className="col-12 col-sm-6 col-lg-3 mb-4">
-                                    <div className="card overflow-hidden" aria-hidden="true">
+                                    <div className="card overflow-hidden shadow-sm" aria-hidden="true">
                                         <div className="card-body">
                                             <h4 className="card-title placeholder-glow m-0">
-                                                <span className="placeholder col-6"></span>
+                                                <Link to={"/glass/" + encodeURIComponent(glass.strGlass)} className="text-black text-decoration-none stretched-link">{glass.strGlass}</Link>
                                             </h4>
                                         </div>
                                     </div>
                                 </div>
-                            </>)}
-                        </>}
+                            </>
+                        })}
+                    </> : <>
+                        {[...Array(12)].map(() => <>
+                            <div className="col-12 col-sm-6 col-lg-3 mb-4">
+                                <div className="card overflow-hidden" aria-hidden="true">
+                                    <div className="card-body">
+                                        <h4 className="card-title placeholder-glow m-0">
+                                            <span className="placeholder col-6"></span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </>)}
                     </>}
-                </div>
-
+                </>}
             </div>
-        </div>
+        </Section>
         <Footer/>
     </>);
 };
